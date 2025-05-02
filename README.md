@@ -4,6 +4,10 @@ This circuit synthesis experiment designs three main task requirements, mainly i
 
 ## :mag: 1.Non-linear Distortion of Amplifiers
 
+<div align="center">
+<src img="assets/images/Amplifier.jpg">
+</div>
+
 In the first experiment, we used an amplifier circuit composed of a common-emitter amplifier circuit and a class-B amplifier circuit. The specific schematic diagram can be viewed through [Schematic Diagram](assets/Amplifier.pdf). In the amplifier circuit, the CD503 chip needs to control the on-off of the RP4 - RP7 resistors through a single-chip microcomputer to achieve the output of waveforms with no distortion, top distortion, bottom distortion, and two-way distortion. At the same time, it is required to control the touchable serial port screen to achieve the synchronous output of the single-chip microcomputer-controlled D/A and the amplifier waveform, and display it on the oscilloscope.
 
 ## :mag: 2.Precision DC Regulated Power Supplies
