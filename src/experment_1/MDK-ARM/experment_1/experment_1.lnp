@@ -1,0 +1,28 @@
+--cpu Cortex-M4.fp
+"experment_1\startup_stm32f407xx.o"
+"experment_1\main.o"
+"experment_1\gpio.o"
+"experment_1\usart.o"
+"experment_1\stm32f4xx_it.o"
+"experment_1\stm32f4xx_hal_msp.o"
+"experment_1\stm32f4xx_hal_tim.o"
+"experment_1\stm32f4xx_hal_tim_ex.o"
+"experment_1\stm32f4xx_hal_uart.o"
+"experment_1\stm32f4xx_hal_rcc.o"
+"experment_1\stm32f4xx_hal_rcc_ex.o"
+"experment_1\stm32f4xx_hal_flash.o"
+"experment_1\stm32f4xx_hal_flash_ex.o"
+"experment_1\stm32f4xx_hal_flash_ramfunc.o"
+"experment_1\stm32f4xx_hal_gpio.o"
+"experment_1\stm32f4xx_hal_dma_ex.o"
+"experment_1\stm32f4xx_hal_dma.o"
+"experment_1\stm32f4xx_hal_pwr.o"
+"experment_1\stm32f4xx_hal_pwr_ex.o"
+"experment_1\stm32f4xx_hal_cortex.o"
+"experment_1\stm32f4xx_hal.o"
+"experment_1\stm32f4xx_hal_exti.o"
+"experment_1\system_stm32f4xx.o"
+--strict --scatter "experment_1\experment_1.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "experment_1.map" -o experment_1\experment_1.axf
