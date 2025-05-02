@@ -55,7 +55,7 @@ int fputc(int c, FILE *stream)
 // 用于重定向printf函数
 {
 	uint8_t ch[1] = {c};
-	HAL_UART_Transmit(&huart6, ch, 1, 0xFFFF);
+	HAL_UART_Transmit(&huart1, ch, 1, 0xFFFF);
 	return c;
 }
 
@@ -63,7 +63,7 @@ int fgetc(FILE *stream)
 // 用于重定向scanf函数
 {
 	uint8_t ch[1];
-	HAL_UART_Receive(&huart6, ch, 1, 0xFFFF);
+	HAL_UART_Receive(&huart1, ch, 1, 0xFFFF);
 	return ch[0];
 }
 
@@ -104,6 +104,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART6_UART_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -113,9 +114,12 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		//主函数运行
-		HAL_UART_Transmit(&huart6, (uint8_t*)"Hello", 5, 0xFFFF);
-		HAL_Delay(1000);
+		//printf("Hello %d\r\n", 123);
+		//HAL_Delay(1000);
+		uint8_t buf[5];
+		HAL_UART_Receive(&huart1, buf, 3, 0xFFFF);
+		HAL_UART_Transmit(&huart1, buf, 3, 0xFFFF);
+		
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
