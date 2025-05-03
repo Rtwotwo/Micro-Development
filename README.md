@@ -9,10 +9,10 @@ In the first experiment, we used an amplifier circuit composed of a common-emitt
 <img src="assets/images/Amplifier.jpg", alt='Non-linear Distortion logo'>
 </div>  
 ___1.Interface design___: For this interface design, we used the VGUS2020 development tool. First, we used the drawing tool of WPS and MATLAB to draw the graphic elements we needed, and then combined them into a picture as our main interface. Among them, for the specific waveforms designed without distortion, top distortion, bottom distortion, and bidirectional distortion, we control the switching of the corresponding interfaces through the button deployment of VGUS2020, and use AI-generated voice as the prompt tone. Finally, a test was conducted using the virtual serial port assistant. It was found that clicking on the serial port screen could return the data stream normally, thereby enabling control by the single-chip microcomputer. It should also be mentioned that in this experiment, we used the USB-TTL serial port to assist in whether the data transmission of the serial port virtual test was correct.  
-<div align="center" style="display: flex; justify-content: center;">
-<img src="assets/results/1_虚拟助手测试.jpg" alt='Non-linear Distortion logo' style="margin-right: 10px;">
-<img src="assets/results/1_实践连线图.jpg" alt='Non-linear Distortion logo'>
-</div>
+
+| Virtual assistant testing | Practical connection chart |
+| :----: | :----: |
+|![Visual Interface](assets/results/1_虚拟助手测试.jpg) | ![Real Circuit](assets/results/1_实践连线图.jpg)|
 
 | No Distortion | Top Distortion | Bottom Distortion | Bidirectional Distortion |
 | :----: | :----: | :----: | :----: |
