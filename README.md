@@ -15,8 +15,8 @@ html
 <div style="text-align: center; margin: 20px;">
     <a href="assets/results/1_实践连线图.jpg" target="_blank">
         <div style="display: inline-flex; gap: 10px;">
-            <img src="assets/results/1_实践连线图.jpg" alt="Real Circuit Diagram" width="200" height="200">
-            <img src="assets/results/1_虚拟助手测试.jpg" alt="Virtual Assistant Test" width="200" height="200">
+            <img src="assets/results/1_实践连线图.jpg" alt="Real Circuit Diagram" width="400" height="400">
+            <img src="assets/results/1_虚拟助手测试.jpg" alt="Virtual Assistant Test" width="400" height="400">
         </div>
     </a>
 </div>
