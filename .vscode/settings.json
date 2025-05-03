@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "delay.h": "c",
+        "gpio.h": "c",
+        "main.h": "c"
+    }
+}

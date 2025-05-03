@@ -4,11 +4,23 @@ This circuit synthesis experiment designs three main task requirements, mainly i
 
 ## :mag: 1.Non-linear Distortion of Amplifiers
 
+In the first experiment, we used an amplifier circuit composed of a common-emitter amplifier circuit and a class-B amplifier circuit. The specific schematic diagram can be viewed through [Schematic Diagram](assets/Amplifier.pdf). In the amplifier circuit, the CD503 chip needs to control the on-off of the RP4 - RP7 resistors through a single-chip microcomputer to achieve the output of waveforms with no distortion, top distortion, bottom distortion, and two-way distortion. At the same time, it is required to control the touchable serial port screen to achieve the synchronous output of the single-chip microcomputer-controlled D/A and the amplifier waveform, and display it on the oscilloscope. Next, I will specifically describe the specific steps of each step in the experiment, including the difficulties encountered and my own design.  
 <div align="center">
 <img src="assets/images/Amplifier.jpg", alt='Non-linear Distortion logo'>
-</div>
+</div>  
+___1.Interface design___: For this interface design, we used the VGUS2020 development tool. First, we used the drawing tool of WPS and MATLAB to draw the graphic elements we needed, and then combined them into a picture as our main interface. Among them, for the specific waveforms designed without distortion, top distortion, bottom distortion, and bidirectional distortion, we control the switching of the corresponding interfaces through the button deployment of VGUS2020, and use AI-generated voice as the prompt tone. Finally, a test was conducted using the virtual serial port assistant. It was found that clicking on the serial port screen could return the data stream normally, thereby enabling control by the single-chip microcomputer. It should also be mentioned that in this experiment, we used the USB-TTL serial port to assist in whether the data transmission of the serial port virtual test was correct.  
 
-In the first experiment, we used an amplifier circuit composed of a common-emitter amplifier circuit and a class-B amplifier circuit. The specific schematic diagram can be viewed through [Schematic Diagram](assets/Amplifier.pdf). In the amplifier circuit, the CD503 chip needs to control the on-off of the RP4 - RP7 resistors through a single-chip microcomputer to achieve the output of waveforms with no distortion, top distortion, bottom distortion, and two-way distortion. At the same time, it is required to control the touchable serial port screen to achieve the synchronous output of the single-chip microcomputer-controlled D/A and the amplifier waveform, and display it on the oscilloscope.
+![Visual Interface](assets/results/1_虚拟助手测试.jpg) ![Real Circuit](assets/results/1_实践连线图.jpg)  
+
+| No Distortion | Top Distortion | Bottom Distortion | Bidirectional Distortion |
+| :----: | :----: | :----: | :----: |
+| ![No Distortion](assets/results/1_waveform_none.jpg) | ![Top Distortion](assets/results/1_waveform_up.jpg) | ![Bottom Distortion](assets/results/1_waveform_down.jpg) | ![Bidirectional Distortion ](assets/results/1_waveform_bi.jpg) |
+
+___2.Circuit Fine-tuning___: In this experiment, we used an oscilloscope to assist in the research on the nonlinear distortion of the amplifier. As can be seen from the schematic diagram of the amplifier below, we need to continuously adjust the appropriate resistance values of RP1, RP2, and RP4 to RP7, so that subsequently, only the CD503 chip is used to control the switching of S2 to S5. Realize the output of waveforms corresponding to no distortion, top distortion, bottom distortion and bidirectional distortion. The waveforms we fine-tuned in the experiment are shown as follows.  
+
+| No Distortion | Top Distortion | Bottom Distortion | Bidirectional Distortion |
+| :----: | :----: | :----: | :----: |
+| ![No Distortion](assets/results/1_exp_none.jpg) | ![Top Distortion](assets/results/1_exp_up.jpg) | ![Bottom Distortion](assets/results/1_exp_down.jpg) | ![Bidirectional Distortion ](assets/results/1_exp_bi.jpg) |
 
 ## :mag: 2.Precision DC Regulated Power Supplies
 
