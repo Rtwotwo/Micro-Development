@@ -2,6 +2,8 @@
     "files.associations": {
         "delay.h": "c",
         "gpio.h": "c",
-        "main.h": "c"
+        "main.h": "c",
+        "cd4053.h": "c",
+        "dac.h": "c"
     }
 }

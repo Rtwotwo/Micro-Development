@@ -29,7 +29,7 @@ ___2.Circuit Fine-tuning___: In this experiment, we used an oscilloscope to assi
 | :----: | :----: | :----: | :----: |
 | ![No Distortion](assets/results/1_exp_none.jpg) | ![Top Distortion](assets/results/1_exp_up.jpg) | ![Bottom Distortion](assets/results/1_exp_down.jpg) | ![Bidirectional Distortion ](assets/results/1_exp_bi.jpg) |
 
-___3.Code Design___: Here, we use stm32cubemx to set the needy parameters of stm32f103c8t6.
+___3.Code Design___: Here, we use stm32cubemx to set the needy parameters or settings of stm32f103c8t6 such as the SYS, USART(PC6-PC7), GPIO, DAC and so on. After finishing the setting, we will click the button of Generate Code to redirect to keil to generate the corresponding code. And we should design the code in keil to receive control signal from screen and decide the waveform of I/O's output. You will see the system architecture diagram below and [source code](src/Test1/Core/Src/main.c).  
 
 ## :mag: 2.Precision DC Regulated Power Supplies
 
