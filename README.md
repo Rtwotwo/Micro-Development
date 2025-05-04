@@ -29,7 +29,7 @@ ___2.Circuit Fine-tuning___: In this experiment, we used an oscilloscope to assi
 | :----: | :----: | :----: | :----: |
 | ![No Distortion](assets/results/1_exp_none.jpg) | ![Top Distortion](assets/results/1_exp_up.jpg) | ![Bottom Distortion](assets/results/1_exp_down.jpg) | ![Bidirectional Distortion ](assets/results/1_exp_bi.jpg) |
 
-___3.Code Design___: 
+___3.Code Design___: Here, we use stm32cubemx to set the needy parameters of stm32f103c8t6.
 
 ## :mag: 2.Precision DC Regulated Power Supplies
 
