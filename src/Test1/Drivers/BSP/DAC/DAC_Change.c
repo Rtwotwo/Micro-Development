@@ -14,7 +14,7 @@ void Generate_Normal_Wave(void) {
     for (int i = 0; i < SAMPLE_SIZE; i++) {
         Normal_Wave[i] = (uint16_t)(1750 + 1750 * sin(2 * 3.1415926f * i / SAMPLE_SIZE));
 				//增加上偏移，防止底部失真
-				Normal_Wave[i] = (uint16_t)150;
+				Normal_Wave[i] += (uint16_t)150;
     }
 }
 
@@ -24,6 +24,7 @@ void Generate_Top_Distort(void) {
     for (int i = 0; i < SAMPLE_SIZE; i++) {
         k=(uint16_t)(1750+value/2+ (1750+value/2)* sin(2 * 3.1415926f * i / SAMPLE_SIZE));
         Top_Distort[i]=((k>=3500)?3500:k);
+				Normal_Wave[i] += (uint16_t)150;
     }
 }
 

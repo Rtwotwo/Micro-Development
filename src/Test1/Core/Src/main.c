@@ -50,9 +50,9 @@ void Usart_Correct_Wave(uint8_t Num);
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint8_t Correct_Commond=0;//1-change;0-none
+uint8_t Correct_Commond=1;//1-change;0-none
 uint8_t Buffer_UART[9];
-uint8_t UART_Wave_State=0;//正常波形：1  顶部失真：2  底部失真：3  双向失真：4
+uint8_t UART_Wave_State=1;//正常波形：1  顶部失真：2  底部失真：3  双向失真：4
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
