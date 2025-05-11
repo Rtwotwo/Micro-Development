@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=NetCFF_1 Pin=U1-3
+Change Component Designator: OldDesignator=GND EN' Vcon Samp NewDesignator=J5
+Added Pin To Net: NetName=GND Pin=U1-9
+Added Room: Name=Sheet1

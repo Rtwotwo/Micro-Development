@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=Vout+ Pin=load-2
+Added Pin To Net: NetName=Vout+ Pin=load-3
+Added Pin To Net: NetName=Vout- Pin=load-4
+Added Pin To Net: NetName=Vout- Pin=load-5

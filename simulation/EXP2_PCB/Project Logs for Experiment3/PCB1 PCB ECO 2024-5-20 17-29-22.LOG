@@ -1,0 +1,7 @@
+Added Component: Designator=J6(XH2.54-WI-6P)
+Add component (AddParameter): Name = "BOM名称"; Value = "6P接插件"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "学习资源"; Value = "最新版本发布https://item.taobao.com/item.htm?id=566775463719"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "版权归属"; Value = "封装库来自淘宝 ID：黄晶宝石"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=Vout+ Pin=J6-1
+Added Pin To Net: NetName=Vout- Pin=J6-6
+Added Member To Class: ClassName=Sheet1 Member=Component J6 HDR-1X6

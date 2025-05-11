@@ -1,0 +1,5 @@
+Added Component: Designator=D?(DO-41)
+Add component (AddParameter): Name = "BOM名称"; Value = "5.1V/1W稳压管"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "学习资源"; Value = "https://item.taobao.com/item.htm?id=566775463719"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "版权归属"; Value = "封装库来自淘宝 ID：黄晶宝石"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Sheet1 Member=Component D? 1N5821
