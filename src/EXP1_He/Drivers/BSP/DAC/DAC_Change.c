@@ -6,7 +6,7 @@
 #include "tim.h"
 #include ".\delay\delay.h"
 
-#define SAMPLE_SIZE 160
+#define SAMPLE_SIZE 480
 
 #define VREFINT_ADDRESS 0x1FFF7A2A
 //uint16_t ADC_Buffer[20];
