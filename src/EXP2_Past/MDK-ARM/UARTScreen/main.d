@@ -1,48 +1,57 @@
-uartscreen/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
-  ..\Core\Inc\stm32f4xx_hal_conf.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h \
-  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h \
-  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h \
-  ..\Drivers\CMSIS\Include\core_cm4.h \
-  D:\Keil\v5\ARM\ARMCLANG\include\stdint.h \
-  E:\本科第三年\电路综合设计实验\实验三\POWER_XL1509\ (1)\POWER_XL1509\ (1)\POWER_XL1509_407\Drivers\CMSIS\Include\cmsis_version.h \
-  E:\本科第三年\电路综合设计实验\实验三\POWER_XL1509\ (1)\POWER_XL1509\ (1)\POWER_XL1509_407\Drivers\CMSIS\Include\cmsis_compiler.h \
-  E:\本科第三年\电路综合设计实验\实验三\POWER_XL1509\ (1)\POWER_XL1509\ (1)\POWER_XL1509_407\Drivers\CMSIS\Include\cmsis_armclang.h \
-  D:\Keil\v5\ARM\ARMCLANG\include\arm_compat.h \
-  D:\Keil\v5\ARM\ARMCLANG\include\arm_acle.h \
-  E:\本科第三年\电路综合设计实验\实验三\POWER_XL1509\ (1)\POWER_XL1509\ (1)\POWER_XL1509_407\Drivers\CMSIS\Include\mpu_armv7.h \
-  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
-  D:\Keil\v5\ARM\ARMCLANG\include\stddef.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_exti.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_adc.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dac.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dac_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
-  ..\Core\Inc\adc.h ..\Core\Inc\dac.h ..\Core\Inc\rtc.h \
-  ..\Core\Inc\tim.h ..\Core\Inc\usart.h ..\Core\Inc\gpio.h \
-  ..\library\inc\delay.h ..\library\inc\key.h \
-  D:\Keil\v5\ARM\ARMCLANG\include\stdbool.h ..\library\inc\led.h \
-  ..\library\inc\uartscreen.h ..\library\inc\rtcclock.h \
-  D:\Keil\v5\ARM\ARMCLANG\include\stdio.h ..\library\inc\touch.h \
-  ..\library\inc\xl1509.h ..\library\inc\powerUARTScreen.h \
-  ..\library\inc\current.h
+uartscreen\main.o: ../Core/Src/main.c
+uartscreen\main.o: ../Core/Inc/main.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+uartscreen\main.o: ../Core/Inc/stm32f4xx_hal_conf.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+uartscreen\main.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+uartscreen\main.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
+uartscreen\main.o: ../Drivers/CMSIS/Include/core_cm4.h
+uartscreen\main.o: E:\DataAPPs\Dianlu Design\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+uartscreen\main.o: ../Drivers/CMSIS/Include/cmsis_version.h
+uartscreen\main.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+uartscreen\main.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+uartscreen\main.o: ../Drivers/CMSIS/Include/mpu_armv7.h
+uartscreen\main.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+uartscreen\main.o: E:\DataAPPs\Dianlu Design\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dac.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dac_ex.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+uartscreen\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+uartscreen\main.o: ../Core/Inc/adc.h
+uartscreen\main.o: ../Core/Inc/dac.h
+uartscreen\main.o: ../Core/Inc/rtc.h
+uartscreen\main.o: ../Core/Inc/tim.h
+uartscreen\main.o: ../Core/Inc/usart.h
+uartscreen\main.o: ../Core/Inc/gpio.h
+uartscreen\main.o: ../library/inc/delay.h
+uartscreen\main.o: ../library/inc/key.h
+uartscreen\main.o: E:\DataAPPs\Dianlu Design\Keil\ARM\ARMCC\Bin\..\include\stdbool.h
+uartscreen\main.o: ../library/inc/led.h
+uartscreen\main.o: ../library/inc/uartscreen.h
+uartscreen\main.o: ../library/inc/rtcclock.h
+uartscreen\main.o: E:\DataAPPs\Dianlu Design\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+uartscreen\main.o: ../library/inc/touch.h
+uartscreen\main.o: ../library/inc/xl1509.h
+uartscreen\main.o: ../library/inc/powerUARTScreen.h
+uartscreen\main.o: ../library/inc/current.h

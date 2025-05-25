@@ -15,7 +15,6 @@
  * @par ĞŞ¸ÄÈÕÖ¾:
  */
 #include <string.h>
-
 #include "key.h"
 #include "stdio.h"
 

@@ -17,6 +17,7 @@
 */
 #include "current.h"
 #include "adc.h"
+
 #define NUM 16
 uint16_t pool[NUM];
 uint16_t current = 0;

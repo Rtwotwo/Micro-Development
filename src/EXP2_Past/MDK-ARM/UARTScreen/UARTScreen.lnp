@@ -1,4 +1,4 @@
---cpu=Cortex-M4.fp.sp
+--cpu Cortex-M4.fp
 "uartscreen\startup_stm32f407xx.o"
 "uartscreen\main.o"
 "uartscreen\gpio.o"
@@ -43,6 +43,6 @@
 "uartscreen\current.o"
 "uartscreen\led.o"
 --library_type=microlib --strict --scatter "UARTScreen\UARTScreen.sct"
---summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "UARTScreen.map" -o UARTScreen\UARTScreen.axf
