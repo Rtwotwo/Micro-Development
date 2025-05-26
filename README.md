@@ -11,9 +11,9 @@ The design requirements for nonlinear distortion of transistors are:
     - The amplifier should be able to output a sinusoidal voltage $ u_{o1} $ with no obvious distortion.
     - The amplifier should be able to output a waveform $ u_{o2} $ with "top-clipping distortion".
     - The amplifier should be able to output a waveform $ u_{o3} $ with "bottom-clipping distortion".
-    - The amplifier should be able to output a waveform $ u_{o4} $ with "double-sided clipping distortion".
+    - The amplifier should be able to output a waveform $u_{o4}$ with "double-sided clipping distortion".
     Note: The experimental circuit is powered by DC +/-9V.
-2. Control the TP1 to output different waveforms through the serial port screen. When TP1 outputs different waveforms, TP2 should synchronously output the corresponding waveform with a peak value of $ 2V_{pp} $.
+2. Control the TP1 to output different waveforms through the serial port screen. When TP1 outputs different waveforms, TP2 should synchronously output the corresponding waveform with a peak value of \$2V_{pp}\$.
 
 <div align="center">
 <img src='assets\results\1_requirements.jpg', alt='Non-linear Requirements>
