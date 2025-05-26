@@ -5,18 +5,15 @@ This circuit synthesis experiment designs three main task requirements, mainly i
 ## :mag: 1.Non-linear Distortion of Amplifiers
 
 In the first experiment, we used an amplifier circuit composed of a common-emitter amplifier circuit and a class-B amplifier circuit. The specific schematic diagram can be viewed through [Schematic Diagram](assets/Amplifier.pdf). In the amplifier circuit, the CD503 chip needs to control the on-off of the RP4 - RP7 resistors through a single-chip microcomputer to achieve the output of waveforms with no distortion, top distortion, bottom distortion, and two-way distortion. At the same time, it is required to control the touchable serial port screen to achieve the synchronous output of the single-chip microcomputer-controlled D/A and the amplifier waveform, and display it on the oscilloscope. Next, I will specifically describe the specific steps of each step in the experiment, including the difficulties encountered and my own design.  
-The design requirements for nonlinear distortion of transistors are:
-
-1. Design and fabricate a device for studying the nonlinear distortion of an amplifier. A sinusoidal wave with a frequency of 1kHz and a peak-to-peak value of 20mV output by the signal source serves as the input voltage $ u_i $ of the transistor amplifier. The test port TP1 should output a waveform $ u_o $ with no obvious distortion (i.e., a distorted waveform), and the peak-to-peak value should be no less than $ 2V_{pp} $:
-    - The amplifier should be able to output a sinusoidal voltage $ u_{o1} $ with no obvious distortion.
-    - The amplifier should be able to output a waveform $ u_{o2} $ with "top-clipping distortion".
-    - The amplifier should be able to output a waveform $ u_{o3} $ with "bottom-clipping distortion".
-    - The amplifier should be able to output a waveform $u_{o4}$ with "double-sided clipping distortion".
-    Note: The experimental circuit is powered by DC +/-9V.
-2. Control the TP1 to output different waveforms through the serial port screen. When TP1 outputs different waveforms, TP2 should synchronously output the corresponding waveform with a peak value of \$2V_{pp}\$.
-
+The design requirements for nonlinear distortion of transistors are: (1). Design and fabricate a device for studying the nonlinear distortion of an amplifier. A sinusoidal wave with a frequency of 1kHz and a peak-to-peak value of 20mV output by the signal source serves as the input voltage $u_i$ of the transistor amplifier. The test port TP1 should output a waveform $u_o$ with no obvious distortion (i.e., a distorted waveform), and the peak-to-peak value should be no less than $2V_{pp}$:
+    - The amplifier should be able to output a sinusoidal voltage $u_{o1}$ with no obvious distortion.
+    - The amplifier should be able to output a waveform $u_{o2}$ with "top-clipping distortion".
+    - The amplifier should be able to output a waveform $u_{o3}$ with "bottom-clipping distortion".
+    - The amplifier should be able to output a waveform $u_{o4}$ with "double-sided clipping distortion".  
+    Note: The experimental circuit is powered by DC +/-9V.  
+(2).Control the TP1 to output different waveforms through the serial port screen. When TP1 outputs different waveforms, TP2 should synchronously output the corresponding waveform with a peak value of $2V_{pp}$.
 <div align="center">
-<img src='assets\results\1_requirements.jpg', alt='Non-linear Requirements>
+<img src='assets\results\1_requirements.jpg', alt='Non-linear Requirements'>
 <img src="assets/images/Amplifier.jpg", alt='Non-linear Distortion logo'>
 </div>  
 
@@ -45,7 +42,25 @@ ___3.Code Design___: Here, we use stm32cubemx to set the needy parameters or set
 
 ## :mag: 2.Precision DC Regulated Power Supplies
 
-在第二次试验里，我们需要尝试做一个精密降压输出电路设计，主要的要求即是
+In the second experiment, we need to attempt to design a precise step-down output circuit. The main requirement are as follows:  Design and fabricate a step-down precision DC switching regulated power supply with the step-down converter XL1509-ADJ as the core component.(1). When the rated input DC voltage is DC +9 ~ +15V, the rated output DC voltage is +5(±0.05V test load RL = 5Ω - 1kΩ). And test the output power supply ripple. (2). The power supply can be turned off and on through the serial port screen, and the output current can be displayed. (3). The output voltage of the power supply can be controlled through the serial port screen. The output voltage range is DC +2 ~ 7.5V with a step of 0.1V. The test load RL = 100Ω / 5Ω.  
+<div align='center'>
+<img src='assets/results/2_circuit_schedule.jpg', alt='Precision DC Regulated Power Supplies'>
+</div>
+
+___1.Circuit Design___: The XL1509 is a high - efficiency step - down DC - DC converter with a fixed switching frequency of 150KHz. It can provide an output current capacity of up to 2A and features low ripple, excellent line regulation, and load regulation. The XL1509 incorporates a fixed - frequency oscillator and a frequency compensation circuit, which simplifies the circuit design.  
+___Power Filter Circuit___: The external +24V input power supply is filtered by capacitors to remove noise before being input to the VIN pin. Here, CIN is a large - capacity electrolytic capacitor of 470μF with a voltage rating of 50V, indicating that the input voltage must not exceed 50V, otherwise the capacitor will be reversely broken down; C1 is 1μF. The method of connecting a large capacitor in parallel with a small capacitor enables both low - frequency and high - frequency signals to pass through well, and can effectively eliminate the high - and low - frequency AC noise on the input signal source.  
+___Buck Circuit___: In this circuit, the diode, capacitor, inductor, etc. of the Buck circuit are located in the external circuit. Inside the chip, the switching module is integrated in the Darlington transistor section. A pulse - width modulation (PWM) wave with a specific duty cycle generated through feedback controls the on - off state of the TTL switch.  
+___Feedback Control Circuit___: When a low level is input to the EN pin, the chip operates normally. The FB feedback pin is connected to the output voltage terminal through resistor voltage division. If the output voltage is lower than 5V, the voltage output by the feedback pin is 1.23V. The error between the feedback pin voltage and 1.23V is amplified inside the chip, which controls the next - stage circuit to generate a PWM wave with a larger duty cycle, thereby increasing the output voltage to 5V. If the output voltage is exactly 5V, the feedback pin voltage = 1.23V, and the error is 0. At this time, the duty cycle of the PWM wave remains unchanged. If the output voltage is higher than 5V, the voltage output by the feedback pin is 1.23V. After the chip internally amplifies the error between the feedback pin voltage and 1.23V, it controls the next - stage circuit to generate a PWM wave with a smaller duty cycle, which can reduce the output voltage to 5V. Through such a continuous dynamic adjustment process, the circuit can achieve a stable 5V DC output voltage. The capacitor C4 connected in parallel with R2 is a compensation capacitor, which provides additional stability for the system.  
+<div style="text-align: center; margin: 20px;">
+    <div style="display: inline-flex; gap: 10px;">
+        <img src="assets/results/2_XL1509.jpg" alt="Real Circuit Diagram" width="200" height="400">
+        <img src="assets/results/2_XL1509_ADJ.jpg" alt="Virtual Assistant Test" width="510" height="400">
+    </div>
+</div>
+___2.GUI Design___: For the experimental interface display, as shown in Figure 2, a VGUS display interface was designed. Using WPS PPT, functional components were drawn, including on/off buttons for enabling/disabling functions, digital display modules for showing output voltage and current, and button control components for adjusting output voltage (with a step size of 0.1V for increment/decrement), realizing user control over the stepped-down output voltage. Meanwhile, a virtual simulation serial port was used for testing to ensure that key value feedback matches the pre-set target values. The project files of GUI Screen are [here](ui/EXP2_ScreenUI).  
+<div style="text-align: center; margin: 20px;">
+<img src='assets/results/2_exp2_screen_ui.jpg', alt='GUI Design'>
+</div>
 
 ## :mag: 3.Flame Detection Circuits
 
