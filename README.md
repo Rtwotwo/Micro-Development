@@ -44,6 +44,7 @@ ___3.Code Design___: Here, we use stm32cubemx to set the needy parameters or set
 
 In the second experiment, we need to attempt to design a precise step-down output circuit. The main requirement are as follows:  Design and fabricate a step-down precision DC switching regulated power supply with the step-down converter XL1509-ADJ as the core component.(1). When the rated input DC voltage is DC +9 ~ +15V, the rated output DC voltage is +5(±0.05V test load RL = 5Ω - 1kΩ). And test the output power supply ripple. (2). The power supply can be turned off and on through the serial port screen, and the output current can be displayed. (3). The output voltage of the power supply can be controlled through the serial port screen. The output voltage range is DC +2 ~ 7.5V with a step of 0.1V. The test load RL = 100Ω / 5Ω.  
 <div align='center'>
+<img src='assets/results/2_requirements.jpg', alt='Exp2 Requirements'>
 <img src='assets/results/2_circuit_schedule.jpg', alt='Precision DC Regulated Power Supplies'>
 </div>
 
@@ -53,7 +54,7 @@ ___Buck Circuit___: In this circuit, the diode, capacitor, inductor, etc. of the
 ___Feedback Control Circuit___: When a low level is input to the EN pin, the chip operates normally. The FB feedback pin is connected to the output voltage terminal through resistor voltage division. If the output voltage is lower than 5V, the voltage output by the feedback pin is 1.23V. The error between the feedback pin voltage and 1.23V is amplified inside the chip, which controls the next - stage circuit to generate a PWM wave with a larger duty cycle, thereby increasing the output voltage to 5V. If the output voltage is exactly 5V, the feedback pin voltage = 1.23V, and the error is 0. At this time, the duty cycle of the PWM wave remains unchanged. If the output voltage is higher than 5V, the voltage output by the feedback pin is 1.23V. After the chip internally amplifies the error between the feedback pin voltage and 1.23V, it controls the next - stage circuit to generate a PWM wave with a smaller duty cycle, which can reduce the output voltage to 5V. Through such a continuous dynamic adjustment process, the circuit can achieve a stable 5V DC output voltage. The capacitor C4 connected in parallel with R2 is a compensation capacitor, which provides additional stability for the system.  
 <div style="text-align: center; margin: 20px;">
     <div style="display: inline-flex; gap: 10px;">
-        <img src="assets/results/2_XL1509.jpg" alt="Real Circuit Diagram" width="200" height="400">
+        <img src="assets/results/2_XL1509.jpg" alt="Real Circuit Diagram" width="300" height="400">
         <img src="assets/results/2_XL1509_ADJ.jpg" alt="Virtual Assistant Test" width="510" height="400">
     </div>
 </div>
