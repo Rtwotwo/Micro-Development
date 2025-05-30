@@ -41,7 +41,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
-/* USER CODE END PD */
+/* USER CODE END PD */ 
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
@@ -65,7 +65,7 @@ uint16_t Set_dac_value=0;
 float Now_Current=0.00f;
 float Top_Value=8.568f;
 float Top_Value1=8.60f;
-float bujing=2.97f;
+float bujing = 3.07f;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
