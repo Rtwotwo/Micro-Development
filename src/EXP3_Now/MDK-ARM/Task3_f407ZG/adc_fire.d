@@ -2,7 +2,7 @@ task3_f407zg\adc_fire.o: ..\Drivers\BSP\ADC1_Fire\ADC_Fire.c
 task3_f407zg\adc_fire.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 task3_f407zg\adc_fire.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 task3_f407zg\adc_fire.o: ../Drivers/CMSIS/Include/core_cm4.h
-task3_f407zg\adc_fire.o: E:\Simulation_Software\keil5\Software\ARM\ARMCC\Bin\..\include\stdint.h
+task3_f407zg\adc_fire.o: E:\DataAPPs\Dianlu Design\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 task3_f407zg\adc_fire.o: ../Drivers/CMSIS/Include/cmsis_version.h
 task3_f407zg\adc_fire.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 task3_f407zg\adc_fire.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -14,7 +14,7 @@ task3_f407zg\adc_fire.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
 task3_f407zg\adc_fire.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 task3_f407zg\adc_fire.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 task3_f407zg\adc_fire.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-task3_f407zg\adc_fire.o: E:\Simulation_Software\keil5\Software\ARM\ARMCC\Bin\..\include\stddef.h
+task3_f407zg\adc_fire.o: E:\DataAPPs\Dianlu Design\Keil\ARM\ARMCC\Bin\..\include\stddef.h
 task3_f407zg\adc_fire.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 task3_f407zg\adc_fire.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 task3_f407zg\adc_fire.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h

@@ -50,7 +50,7 @@
 
 /* USER CODE BEGIN PV */
 extern uint8_t ADC_GetReady;
-extern uint8_t Fire_State;   //0��ʾ�����1��ʾ���
+extern uint8_t Fire_State;   
 
 extern uint8_t adc_count;
 extern uint8_t Resistance_Value;
