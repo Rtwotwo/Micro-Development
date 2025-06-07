@@ -9,6 +9,8 @@
 #define BUFFER_FILITER_VALUE 5
 float voltage_adc=3.300f;   //老师给的标准板是2.5V，这里是自己的板是3.3V
 //float voltage_adc=2.500f;   //老师给的标准板是2.5V，这里是自己的板是3.3V
+//修改ADC
+
 
 uint8_t fire_threshold=4;
 uint8_t threshold_state=0;      //0为不变,1为增加，2为减少
@@ -102,7 +104,9 @@ void Update_Fire_State(void)
         ADC_GetReady=1;
     }
     
-    if(Resistance_Value<=fire_threshold)
+		//ADC 判断火焰的条件的方法
+    //if(Resistance_Value<=fire_threshold)
+		if(Resistance_Value>=fire_threshold)
     {
         Fire_State=1;
     }
