@@ -58,11 +58,39 @@ ___Feedback Control Circuit___: When a low level is input to the EN pin, the chi
         <img src="assets/results/2_XL1509_ADJ.jpg" alt="Virtual Assistant Test" width="510" height="400">
     </div>
 </div>
-___2.GUI Design___: For the experimental interface display, as shown in Figure 2, a VGUS display interface was designed. Using WPS PPT, functional components were drawn, including on/off buttons for enabling/disabling functions, digital display modules for showing output voltage and current, and button control components for adjusting output voltage (with a step size of 0.1V for increment/decrement), realizing user control over the stepped-down output voltage. Meanwhile, a virtual simulation serial port was used for testing to ensure that key value feedback matches the pre-set target values. The project files of GUI Screen are [here](https://github.com/Rtwotwo/Micro-Development/tree/main/ui/EXP2_ScreenUI).  
+___2.GUI Design___: For the experimental interface display, as shown in Figure 2, a VGUS display interface was designed. Using WPS PPT, functional components were drawn, including on/off buttons for enabling/disabling functions, digital display modules for showing output voltage and current, and button control components for adjusting output voltage (with a step size of 0.1V for increment/decrement), realizing user control over the stepped-down output voltage. Meanwhile, a virtual simulation serial port was used for testing to ensure that key value feedback matches the pre-set target values. The project files of GUI Screen are ![ here ](https://github.com/Rtwotwo/Micro-Development/tree/main/ui/EXP2_ScreenUI).  
 <div align="center">
 <img src='assets/results/2_exp2_screen_ui.jpg', alt='GUI Design'>
 </div>
 
 ## :mag: 3.Flame Detection Circuits
 
-## Continuous Updating
+In the third circuit experiment, we need to use resistors to replace thermistors for flame detection: when the fire grows larger, the resistance values of R1 to R10 connected to the circuit gradually decrease, and an alarm will be triggered when the resistance values are lower than a certain threshold. Therefore, this experiment mainly has two tasks:(1). Design using Multisim: perational amplifier selection: LM324/OP07. Transformer: Simulation using an ideal transformer; Simulation using the UU9.8 - 50mH model; Differences from the ideal transformer and how to improve the circuit. (2). Reasonable debugging. What are the differences between simulation and actual measurement?  
+<div align="center">
+<img src='assets/screen_exp3/circuit.jpg', alt='GUI Design'>
+</div>
+
+___1.Circuit Design___: OP07 and LM324 are two different types of operational amplifiers, each with its applicable scenarios, advantages, and disadvantages. OP07 is a high-precision operational amplifier, and its main advantages include:(1).High precision: OP07 has very small input bias current and input offset voltage, resulting in high output precision. It is commonly used in precision measurement and control systems. (2).Low noise: The internal circuit design of OP07 minimizes noise, making it suitable for applications requiring high-precision signal acquisition and processing. (3).Low offset voltage: OP07 has a very small offset voltage, making it suitable for applications requiring high-precision operations.  
+LM324 is a commonly used operational amplifier, and its main advantages include: (1).Low cost: The manufacturing cost of LM324 is relatively low, so its price is also cheaper, making it suitable for applications with low cost requirements. (2). High output current: LM324 has a relatively high output current, making it suitable for applications requiring high-current drive. (3).Wide input voltage range: LM324 has a relatively wide input voltage range, making it suitable for applications requiring the processing of relatively large signals. Finally, two OP07s are used for the first and second - stage amplification in the designed circuit diagram, and an LM324 is used for the third - stage amplification. Note that the signal output from the second - stage amplification is a half - wave rectified waveform, and the output of the third - stage is the finally detected DC voltage value and according to the circuit diagram shown.  
+<div style="text-align: center; margin: 20px;">
+    <div style="display: inline-flex; gap: 10px;">
+        <img src="assets/screen_exp3/welding_0.jpg" alt="Real Circuit Diagram" width="400" height="200">
+        <img src="assets/screen_exp3/welding_1.jpg" alt="Virtual Assistant Test" width="400" height="200">
+    </div>
+</div>
+___2.Circuit Tuning___: After the circuit is soldered, a 100Hz square wave signal with 3.3V needs to be input to the board through an amplifier. However, the signal after passing through the transformer may have some impulse voltage due to lack of tuning. When the peak value of this impulse voltage is greater than the peak of the signal after half - wave rectification, it will lead to instability in the final voltage output at the two stages of R9 and R10. Therefore, it is necessary to tune the output and gradually change the frequency of the square wave signal until the output reaches the maximum value.  
+<div style="text-align: center; margin: 20px;">
+    <div style="display: inline-flex; gap: 10px;">
+        <img src="assets/screen_exp3/simulation_0.jpg" alt="Real Circuit Diagram" width="600" height="200">
+        <img src="assets/screen_exp3/simulation_1.jpg" alt="Virtual Assistant Test" width="200" height="200">
+    </div>
+</div>
+___3.GUI Design___: The interface of this flame detection circuit experiment includes the title "Experiment 3: Flame Detection Circuit". On the left side, there is a graphical component named "Fire Alarm Indicator", which is used to visually show the fire state. The blue area in the middle displays key parameters. "Fire Threshold: 4 MΩ" indicates the critical resistance value for triggering the fire determination, and "Potentiometer Resistance: 10 MΩ" represents the currently set resistance of the potentiometer. At the bottom, there are "Increase" and "Decrease" buttons, which can be used to adjust relevant parameters. The overall layout clearly presents the key information of the experiment and the interactive controls.
+And the UI project file is at the [file](ui\EXP3_Now\EXP3_Now.vt).
+<div align="center">
+<img src='assets/screen_exp3/ui_0.jpg', alt='GUI Design'>
+</div>
+
+## :heart: Thanks
+
+In this circuit synthesis experimental course, due to my initial learning of single - chip microcomputer usage and circuit design, there were numerous difficulties. However, I'm very grateful for the assistance from senior students of previous years, and most importantly, for the help from He. This enabled our group to successfully pass this experimental course.  
