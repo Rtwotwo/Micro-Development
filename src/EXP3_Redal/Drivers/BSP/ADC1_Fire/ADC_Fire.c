@@ -26,7 +26,7 @@ uint8_t Resistance_Value=10;
 uint8_t Resistance_Value_buffer[2]={10,10};
 uint8_t Resistance_Value_buffer_Address=0;
 
-uint16_t ADC_compare_value[10]={2523,1353,888,629,470,355,267,204,157,67};
+uint16_t ADC_compare_value[10]={2589,1368,885,608,446,332,250,192,144,62};
 
 void bubbleSort(uint16_t arr[], uint8_t n) 
 {

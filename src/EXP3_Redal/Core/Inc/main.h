@@ -58,7 +58,7 @@ void Error_Handler(void);
 
 /* Private defines -----------------------------------------------------------*/
 #define PWM_Pin GPIO_PIN_0
-#define PWM_GPIO_Port GPIOA
+#define PWM_GPIO_Port GPIOA  
 #define ADC_Pin GPIO_PIN_6
 #define ADC_GPIO_Port GPIOA
 #define UART6_TX_Pin GPIO_PIN_6
