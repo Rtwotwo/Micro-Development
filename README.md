@@ -59,6 +59,7 @@ ___Feedback Control Circuit___: When a low level is input to the EN pin, the chi
     </div>
 </div>
 ___2.GUI Design___: For the experimental interface display, as shown in Figure 2, a VGUS display interface was designed. Using WPS PPT, functional components were drawn, including on/off buttons for enabling/disabling functions, digital display modules for showing output voltage and current, and button control components for adjusting output voltage (with a step size of 0.1V for increment/decrement), realizing user control over the stepped-down output voltage. Meanwhile, a virtual simulation serial port was used for testing to ensure that key value feedback matches the pre-set target values. The project files of GUI Screen are [here](https://github.com/Rtwotwo/Micro-Development/tree/main/ui/EXP2_ScreenUI).  
+
 <div align="center">
 <img src='assets/results/2_exp2_screen_ui.jpg', alt='GUI Design'>
 </div>
