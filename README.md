@@ -90,8 +90,11 @@ ___2.Circuit Tuning___: After the circuit is soldered, a 100Hz square wave signa
 
 ___3.GUI Design___: The interface of this flame detection circuit experiment includes the title "Experiment 3: Flame Detection Circuit". On the left side, there is a graphical component named "Fire Alarm Indicator", which is used to visually show the fire state. The blue area in the middle displays key parameters. "Fire Threshold: 4 MΩ" indicates the critical resistance value for triggering the fire determination, and "Potentiometer Resistance: 10 MΩ" represents the currently set resistance of the potentiometer. At the bottom, there are "Increase" and "Decrease" buttons, which can be used to adjust relevant parameters. The overall layout clearly presents the key information of the experiment and the interactive controls.
 And the UI project file is at the [file](ui\EXP3_Now\EXP3_Now.vt).
-<div align="center">
-<img src='assets/screen_exp3/ui_0.jpg', alt='GUI Design'>
+<div style="text-align: center; margin: 20px">
+<div style="display: inline-flex; gap: 10px;">
+<img src='assets/screen_exp3/ui_0.jpg', alt='GUI Design' width="600" height="300">
+<img src='assets/screen_exp3/ui_1.jpg', alt='GUI Design' width="200" height="300">
+</div>
 </div>
 
 ## :heart: 4.Thanks
