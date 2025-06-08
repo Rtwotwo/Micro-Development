@@ -92,8 +92,8 @@ ___3.GUI Design___: The interface of this flame detection circuit experiment inc
 And the UI project file is at the [file](ui\EXP3_Now\EXP3_Now.vt).
 <div style="text-align: center; margin: 20px">
 <div style="display: inline-flex; gap: 10px;">
-<img src='assets/screen_exp3/ui_0.jpg', alt='GUI Design' width="600" height="300">
-<img src='assets/screen_exp3/ui_1.jpg', alt='GUI Design' width="200" height="300">
+<img src='assets/screen_exp3/ui_0.jpg', alt='GUI Design' width="500" height="300">
+<img src='assets/screen_exp3/ui_1.jpg', alt='GUI Design' width="300" height="300">
 </div>
 </div>
 
